@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guess My Number</title>
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-body {
-  font-family: "Press Start 2P", system-ui;
-  background-color: #222;
-  color: white;
-  padding: 2rem;
-}
-</style>
-</head>
-<body>
-  <div class="flex justify-between items-center mb-10">
-    <button class="bg-white text-black px-3 py-2 rouded-2xl">Again</button>
-    <p class="hidden md:block">Between 1 and 20!</p>
-  </div>
-  <div class="flex flex-col gap-y-5 justify-center items-center">
-    <h1 class="text-center">Guess My Number!</h1>
-    <!-- Secret Box -->
-     <div class="w-[100px] h-[100px] border md:w-[300px] md:h-[300px] border-white flex justify-center items-center">
-      <p class="text-2xl md:text-6xl">?</p>
-     </div>
-  </div>
-  <!-- Input and scores -->
-   <div class="mt-[100px] flex flex-col md:flex-row justify-between items-center">
-    <!-- Left -->
-    <div>
-      <input type="number" class="border border-white w-[120px] h-[40px] md:w-[200px]
-      md:h-[50px] rounded-md">
-      <div class="mt-4 flex justify-center items-center">
-         <button class="bg-[#333] md:px-2 md:py-3 p-2 rouded-2xl text-sm ">Check!</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+      body {
+        font-family: "Press Start 2P", system-ui;
+        background-color: #222;
+        color: white;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex justify-between items-center mb-10">
+      <button class="again bg-[#333] px-3 py-2 rounded-md">Again</button>
+      <p class="hidden md:block">Between 1 and 20!</p>
+    </div>
+    <div class="flex flex-col gap-y-5 justify-center items-center">
+      <h1 class="text-center">Guess My Number!</h1>
+      <!-- Secret Box -->
+      <div
+        class="w-[100px] h-[100px] border md:w-[300px] md:h-[300px] border-white flex justify-center items-center"
+      >
+        <p class="number-box text-2xl md:text-6xl">?</p>
+      </div>
+      <p class="md:hidden mt-10 text-center">(Between 1-20)</p>
+    </div>
+    <!-- Input and scores -->
+    <div
+      class="mt-[100px] flex flex-col md:flex-row justify-between items-center"
+    >
+      <!-- Left -->
+      <div>
+        <input
+          type="number"
+          class="guess-value border border-white w-[120px] h-[40px] md:w-[200px] md:h-[50px] rounded-md p-2"
+        />
+        <div class="mt-4 flex justify-center items-center">
+          <button
+            class="check-btn bg-[#333] md:px-2 md:py-3 p-2 rounded-md text-sm"
+          >
+            Check!
+          </button>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="mt-8 md:mt-0 text-center">
+        <p class="message font-bold text-lg md:text-lg mb-5">
+          🤔 Start guessing
+        </p>
+        <p class="text-sm md:text-lg">
+          💯 Score: <span class="score">20</span>
+        </p>
+        <p class="text-sm md:text-lg mt-4">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
       </div>
     </div>
-    <!-- Right -->
-    <div class="mt-8 md:mt-0 text-center">
-      <p class="text-sm md:text-lg">💯 Score: 20</p>
-      <p class="text-sm md:text-lg mt-4">🥇 Highscore: 0</p>
-    </div>
-   </div>
-  <script src="script.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
 </html>
