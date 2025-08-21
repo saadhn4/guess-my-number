@@ -42,6 +42,9 @@ document.querySelector(".again").addEventListener("click", () => {
 
   document.querySelector(".message").textContent = "🤔 Start guessing";
 
+  // resetting the score in the UI
+  document.querySelector(".score").textContent = score;
+
   document.querySelector("body").style.backgroundColor = "#222";
 
   document.querySelector(".number-box").textContent = "?";
