@@ -8,6 +8,9 @@ document.querySelector(".check-btn").addEventListener("click", () => {
   // getting the input value only after clicking
   const guess = Number(document.querySelector(".guess-value").value);
 
+  if (!guess)
+    document.querySelector(".message").textContent = "Enter a number.";
+
   if (guess === secretNumber) {
     if (score > highscore) {
       highscore = score;
