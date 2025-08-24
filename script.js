@@ -38,6 +38,8 @@ document.querySelector(".check-btn").addEventListener("click", () => {
 });
 
 document.querySelector(".again").addEventListener("click", () => {
+  // Generating a new secret number
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
 
   document.querySelector(".message").textContent = "🤔 Start guessing";
